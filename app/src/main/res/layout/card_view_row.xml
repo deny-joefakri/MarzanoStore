@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_margin="5dp"
+        card_view:cardCornerRadius="2dp"
+        card_view:contentPadding="10dp">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <!-- Thumbnail Image -->
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/thumbnail2"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="8dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="130dp">
+            <TextView
+                android:id="@+id/namat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:maxLines="1"
+                android:maxLength="30"
+                android:ellipsize="end"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/imageView"
+                android:layout_toEndOf="@+id/imageView"/>
+
+            <TextView
+                android:id="@+id/desct"
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignLeft="@+id/namat"
+                android:layout_alignStart="@+id/namat"
+                android:maxLines="1"
+                android:maxLength="30"
+                android:ellipsize="end"/>
+                    <TextView
+                        android:id="@+id/typet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignLeft="@+id/desct"
+                        android:layout_alignStart="@+id/desct"
+                        android:textStyle="italic"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>
